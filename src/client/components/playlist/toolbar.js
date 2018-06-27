@@ -14,7 +14,10 @@ export class PlaylistToolbarComponent extends ElementComponent {
 		const $addButton = $(`
 			<a href="#" class="add-button">
 				Add Video
-			</a>`).appendTo(this.$element);
+			</a>
+			<p class="username-msg">Enter your username to add a video to the playlist</p>
+			`).appendTo(this.$element);
+
 			
 		Observable.fromEventNoDefault($addButton, "click")
 			.flatMap(() => Observable.fromPrompt("Enter the URL of the video"))

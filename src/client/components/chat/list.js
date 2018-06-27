@@ -47,7 +47,7 @@ function userActionFactory({type, user}) {
 		return null;
 		
 	return $(`<li class="user-action ${type}" />`).append([
-		$(`<span class="author" />`).text(user.name).css("color", user.color),
+		$(`<span class="author" />`).text(user.name).css("color", "#80d00b"),
 		$(`<span class="message" />`).text(type === "add" ? "joined" : "left"),
 		$(`<time />`).text(moment().format("h:mm:ss a"))
 	]);
@@ -57,7 +57,7 @@ function chatMessageFactory({user, message, type, time}) {
 	return $(`<li class="message ${type}" />`)
 		.data("user", user.name)
 		.append([
-			$(`<span class="author" />`).text(user.name).css("color", user.color),
+			$(`<span class="author" />`).text(user.name).css("color", "#80d00b"),
 			$(`<span class="message" />`).text(message),
 			$(`<time />`).text(moment(time).format("h:mm:ss a"))
 		]);

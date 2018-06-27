@@ -31,6 +31,7 @@ section.playlist {
 // ----------------
 // Chrome
 section.playlist .playing-indicator {
+	display: none;
 	z-index: 200;
 	position: absolute;
 	width: 10px;
@@ -45,14 +46,17 @@ section.playlist .playing-indicator {
 
 // ----------------
 // Toolbar
-html.not-logged-in section.playlist .toolbar {
+html.not-logged-in section.playlist .toolbar .add-button {
+	display: none;
+}
+html.logged-in section.playlist .toolbar .username-msg {
 	display: none;
 }
 
 section.playlist .toolbar {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 10px;
+	padding: 10px;
 	
 	a {
 		display: inline-block;
@@ -252,6 +256,10 @@ section.playlist .playlist-list {
 				
 				.details time {
 					color: darken($color-highlight, 10%);
+				}
+
+				.details .title {
+					color: #80d00b;
 				}
 				
 				&:after, .progress {
