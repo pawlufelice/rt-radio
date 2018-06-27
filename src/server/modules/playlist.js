@@ -72,7 +72,7 @@ export class PlaylistModule extends ModuleBase {
 			this.setCurrentSource(this._playlist[this._currentIndex + 1]);
 	}
 
-	addSourceFromUrl$(url) {
+	addSourceFromUrl$(url, user) {
 		const validator = validateAddSource(url);
 		if (!validator.isValid)
 			return validator.throw$();
@@ -91,7 +91,7 @@ export class PlaylistModule extends ModuleBase {
 				return fail(`No service accepted url ${url}`);
 
 			getSource$
-				.do(source => this.addSource(source))
+				.do(source => this.addSource(Object.assign({}, source, { user: user.name })))
 				.subscribe(observer);
 		});
 	}
@@ -205,7 +205,7 @@ export class PlaylistModule extends ModuleBase {
 				if (!isLoggedIn())
 					return fail("You must be logged in to do that");
 
-				return this.addSourceFromUrl$(url);
+				return this.addSourceFromUrl$(url, this._users.getUserForClient(client));
 			},
 
 			"playlist:set-current": ({id}) => {

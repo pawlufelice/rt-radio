@@ -56,8 +56,10 @@ function devServerWatch() {
 
 function devServerReload() {
 	return $.nodemon({
+		exec: 'node --inspect',
 		script: "./build/server.js",
 		watch: "./build",
+		verbose: true,
 		env: {
 			"NODE_ENV": "development",
 			"USE_WEBPACK": "true"
