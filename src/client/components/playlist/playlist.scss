@@ -50,24 +50,22 @@ html.not-logged-in section.playlist .toolbar {
 }
 
 section.playlist .toolbar {
-	padding-bottom: 5px;
-	background: $border-panel;
-	flex-grow: 0;
-	flex-shrink: 0;
-	border-bottom: 2px solid darken($background, 5%);
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
 	
 	a {
 		display: inline-block;
-		font-size: 10pt;
+		font-size: 16px;
 		text-decoration: none;
-		padding: 2px 5px;
-		color: lighten($color-information, 10%);
-		border: darken($background, 20%);
-		
-		&:hover {
-			color: $color-highlight;
-		}
+		padding: 4px 10px;
+		color: $rt-green;
+		background-color: white;
+		// border: 1px solid $rt-green;
+		border-radius: 5px;
+		cursor: pointer;
 	}
+	
 }
 
 // ----------------

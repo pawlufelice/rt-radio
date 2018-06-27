@@ -13,7 +13,7 @@ export class PlaylistToolbarComponent extends ElementComponent {
 	_onAttach() {
 		const $addButton = $(`
 			<a href="#" class="add-button">
-				<i class="fa fa-plus-square" /> Add Video
+				Add Video
 			</a>`).appendTo(this.$element);
 			
 		Observable.fromEventNoDefault($addButton, "click")
