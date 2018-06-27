@@ -1,13 +1,6 @@
 [
 	{
 		"type": "youtube",
-		"url": "S2ds8tCtomQ",
-		"thumb": "https://i.ytimg.com/vi/S2ds8tCtomQ/default.jpg",
-		"title": "Electric Light Orchestra- Telephone Lines",
-		"totalTime": 297
-	},
-	{
-		"type": "youtube",
 		"url": "GDu66s_ralA",
 		"thumb": "https://i.ytimg.com/vi/GDu66s_ralA/default.jpg",
 		"title": "ELO - Time- Ticket to the Moon",
@@ -33,13 +26,6 @@
 		"thumb": "https://i.ytimg.com/vi/vt1Pwfnh5pc/default.jpg",
 		"title": "Johnny Cash - Hurt HD 720p",
 		"totalTime": 230
-	},
-	{
-		"type": "youtube",
-		"url": "s7dTBoW5H9k",
-		"thumb": "https://i.ytimg.com/vi/s7dTBoW5H9k/default.jpg",
-		"title": "ELO - Mr. Blue Sky (Audio)",
-		"totalTime": 305
 	},
 	{
 		"type": "youtube",
