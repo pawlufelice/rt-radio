@@ -91,7 +91,7 @@ export class PlaylistModule extends ModuleBase {
 				return fail(`No service accepted url ${url}`);
 
 			getSource$
-				.do(source => this.addSource(Object.assign({}, source, { user: user.name })))
+				.do(source => this.addSource(Object.assign({}, source, _.pick(user, 'name', 'color'))))
 				.subscribe(observer);
 		});
 	}

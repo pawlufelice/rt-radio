@@ -183,7 +183,7 @@ class PlaylistItemComponent extends ElementComponent {
 			$(`<div class="details" />`).append([
 				$(`<span class="title" />`).attr("title", source.title).text(source.title),
 				$(`<time />`).text(moment.duration(source.totalTime, "seconds").format()),
-				$(`<pan />`).text(source.user)
+				$(`<span />`).attr("style", "color: " + source.color).text(source.name)
 			]);
 
 		this._$progress = $(`<span class="progress" />`);
