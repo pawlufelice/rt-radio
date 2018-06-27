@@ -20,8 +20,6 @@ class PlaylistComponent extends ComponentBase {
 	_onAttach() {
 		const $title = this._$mount.find("> h1");
 		
-		const toolbar = new PlaylistToolbarComponent(this._playlist);
-		toolbar.attach(this._$mount);
 		
 		this._$chrome = $(`<div class="chrome" />`).appendTo(this._$mount);
 		this._$scrollArea = $(`<div class="scroll-area" />`).appendTo(this._$chrome);
@@ -34,6 +32,9 @@ class PlaylistComponent extends ComponentBase {
 		
 		const chrome = new PlaylistChromeComponent(this._playlist, $title);
 		chrome.attach(this._$chrome);
+		
+		const toolbar = new PlaylistToolbarComponent(this._playlist);
+		toolbar.attach(this._$mount);
 		
 		this.children.push(toolbar, list, contextMenu, chrome);
 	}
