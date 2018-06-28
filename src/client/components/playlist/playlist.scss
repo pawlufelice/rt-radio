@@ -8,6 +8,9 @@ section.playlist {
 	> h1 {
 		border: none;
 	}
+	> h2 {
+		padding-left: 15px;
+	}
 	
 	.chrome {
 		overflow: hidden;
@@ -28,6 +31,7 @@ section.playlist {
 // ----------------
 // Chrome
 section.playlist .playing-indicator {
+	display: none;
 	z-index: 200;
 	position: absolute;
 	width: 10px;
@@ -42,29 +46,30 @@ section.playlist .playing-indicator {
 
 // ----------------
 // Toolbar
-html.not-logged-in section.playlist .toolbar {
+html.not-logged-in section.playlist .toolbar .add-button {
+	display: none;
+}
+html.logged-in section.playlist .toolbar .username-msg {
 	display: none;
 }
 
 section.playlist .toolbar {
-	padding-bottom: 5px;
-	background: $border-panel;
-	flex-grow: 0;
-	flex-shrink: 0;
-	border-bottom: 2px solid darken($background, 5%);
+	display: flex;
+	justify-content: center;
+	padding: 10px;
 	
 	a {
 		display: inline-block;
-		font-size: 10pt;
+		font-size: 16px;
 		text-decoration: none;
-		padding: 2px 5px;
-		color: lighten($color-information, 10%);
-		border: darken($background, 20%);
-		
-		&:hover {
-			color: $color-highlight;
-		}
+		padding: 4px 10px;
+		color: $rt-green;
+		background-color: white;
+		// border: 1px solid $rt-green;
+		border-radius: 5px;
+		cursor: pointer;
 	}
+	
 }
 
 // ----------------
@@ -251,6 +256,10 @@ section.playlist .playlist-list {
 				
 				.details time {
 					color: darken($color-highlight, 10%);
+				}
+
+				.details .title {
+					color: #80d00b;
 				}
 				
 				&:after, .progress {

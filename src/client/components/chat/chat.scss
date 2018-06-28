@@ -51,7 +51,7 @@ section.chat {
 			}
 			
 			time {
-				color: darken($color, 10%);
+				color: $rt-green;
 				font-size: 7pt;
 				align-self: center;
 			}
